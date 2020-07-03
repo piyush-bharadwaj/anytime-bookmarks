@@ -1,0 +1,20 @@
+<table mat-table [dataSource]="bookmarkList" class="mat-elevation-z8">
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef>Title </th>
+    <td mat-cell *matCellDef="let element">
+      <div fxLayout="row">
+        <span fxFlex >{{ element.title }}</span>
+      </div>
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="url">
+    <th mat-header-cell *matHeaderCellDef>Url </th>
+    <td mat-cell *matCellDef="let element">
+      <div fxLayout="row">
+        <span fxFlex>{{ element.url }}</span>
+      </div>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="bookmarkColumnTitles"></tr>
+  <tr mat-row *matRowDef="let row; columns: bookmarkColumnTitles;"></tr>
+</table>

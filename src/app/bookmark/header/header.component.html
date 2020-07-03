@@ -1,0 +1,14 @@
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+   <span>Manage your bookmark</span>
+  <div>
+    <button mat-icon-button [matMenuTriggerFor]=" menu" mdTooltip="Change theme">
+      <mat-icon>format_color_fill</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Default</button>
+      <!--
+      <button mat-menu-item (click)="changeTheme('dark-theme')">Dark</button>
+      <button mat-menu-item (click)="changeTheme('light-theme')">Light</button>-->
+    </mat-menu>
+  </div>
+  </mat-toolbar>
